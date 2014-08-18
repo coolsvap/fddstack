@@ -11,4 +11,5 @@ RUN git clone https://github.com/coolsvap/ubuntu-devstack.git
 RUN cp ubuntu-devstack/localrc devstack/localrc
 RUN wc -l devstack/localrc
 RUN devstack/tools/create-stack-user.sh
-RUN runuser -l stack -c devstack/stack.sh
+RUN chown -Rf stack:stack devstack
+RUN sudo -u stack bash -c devstack/stack.sh
