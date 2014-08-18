@@ -12,4 +12,6 @@ RUN cp ubuntu-devstack/localrc devstack/localrc
 RUN wc -l devstack/localrc
 RUN devstack/tools/create-stack-user.sh
 RUN chown -Rf stack:stack devstack
+RUN chmod -Rf 755 /opt/stack
+RUN chown -Rf stack:stack /opt/stack
 RUN su stack bash -c devstack/stack.sh
