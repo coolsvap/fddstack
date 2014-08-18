@@ -3,7 +3,7 @@ MAINTAINER      Swapnil Kulkarni "coolsvap@gmail.com"
 
 RUN uname -a
 RUN whoami
-RUN sudo yum install git -y
+RUN yum install git -y
 RUN git --version
 RUN rm -rf devstack ubuntu-devstack
 RUN git clone https://github.com/openstack-dev/devstack.git
