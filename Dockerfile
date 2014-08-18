@@ -14,4 +14,5 @@ RUN devstack/tools/create-stack-user.sh
 RUN chown -Rf stack:stack devstack
 RUN chmod -Rf 755 /opt/stack
 RUN chown -Rf stack:stack /opt/stack
+RUN grep -rl 'Default requiretty' /etc/sudoers | xargs sed -i 's/Default requiretty/#Default requiretty/g'
 RUN su stack bash -c devstack/stack.sh
