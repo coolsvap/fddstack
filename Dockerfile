@@ -1,4 +1,4 @@
-FROM            coolsvap/fddstack
+FROM            fedora
 MAINTAINER      Swapnil Kulkarni "coolsvap@gmail.com"
 
 RUN uname -a
