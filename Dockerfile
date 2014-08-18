@@ -1,9 +1,9 @@
-FROM            fedora
+FROM            coolsvap/fddstack
 MAINTAINER      Swapnil Kulkarni "coolsvap@gmail.com"
 
 RUN uname -a
 RUN whoami
-RUN sudo apt-get install git -y
+RUN sudo yum install git -y
 RUN git --version
 RUN rm -rf devstack ubuntu-devstack
 RUN git clone https://github.com/openstack-dev/devstack.git
